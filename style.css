@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .6)), url(images/images4.jpg) center no-repeat;
+    background-size: cover;
+}
+
+.heading {
+    color: #fff;
+    font-size: 55px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: josefin Sans, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.heading::after {
+    content: '';
+    width: 5px;
+    height: 55px;
+    background-color: #fff;
+    position: absolute;
+    animation: blinking 1s 3s infinite;
+}
+
+@keyframes blinking {
+    0% {background-color: #fff}
+    50% {background-color: transparent}
+    100% {background-color: #fff}
+}
+
+.card-wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card {
+    width: 280px;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: transform .5s;
+}
+
+@keyframes cardAmin{
+    0% {opacity: 0}
+    100%{opacity: 1}
+}
+
+.card:nth-child(1) {
+    /* animation: cardAmin 2s 3s backwards; */
+}
+.card:nth-child(2) {
+    /* animation: cardAmin 2s 3.5s backwards; */
+}
+.card:nth-child(3) {
+    /* animation: cardAmin 2s 4s backwards; */
+}
+
+
+.card:hover {
+transform: scale(1.1);
+}
+
+.image-top {
+width: 100%;
+height: 220px;
+object-fit: cover;
+clip-path: polygon(0 1%, 100% 1%, 100% 85%, 0 100%);
+
+}
+
+.profile-images {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: -110px;
+    z-index: 10;
+    border: 2.5px solid #bbf1ac;
+}
+
+.card h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    color: #555;
+    margin: 10px;
+}
+
+.job {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #777;
+    font-weight: 300;
+}
+
+.about-me {
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 14px;
+width: 90%;
+margin: 15px 0;
+font-style: italic;
+color: #444;
+text-align: center;
+}
+
+.card button {
+    width: 120px;
+    height: 20px;
+    margin: 10px 0;
+    background-color: tomato;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    font-family: fantasy;
+    color: #eee;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, .4);
+}
+
+.card:hover button {
+    animation: buttonRotation 2s 1s linear;
+}
+
+@keyframes buttonRotation {
+  0% {transform: scale(1) rotateZ(0)}  
+  5% {transform: scale(1.2)rotateZ(5deg)}
+  10% {transform: scale(1.2)rotateZ(-5deg)}
+  15% {transform: scale(1.2)rotateZ(5deg)}
+  20% {transform: scale(1.2)rotateZ(-5deg)}
+  25% {transform: scale(1.2)rotateZ(5deg)}
+  30% {transform: scale(1.2)rotateZ(-5deg)}
+  35% {transform: scale(1.2)rotateZ(5deg)}
+  40% {transform: scale(1.2)rotateZ(-5deg)}
+  45% {transform: scale(1.2)rotateZ(5deg)}
+  50% {transform: scale(1.2)rotateZ(-5deg)}
+  55% {transform: scale(1.2)rotateZ(5deg)}
+  60% {transform: scale(1.2)rotateZ(-5deg)}
+  65% {transform: scale(1.2)rotateZ(5deg)}
+  70% {transform: scale(1.2)rotateZ(-5deg)}
+  75% {transform: scale(1.2)rotateZ(5deg)}
+  80% {transform: scale(1.2)rotateZ(-5deg)}
+  85% {transform: scale(1.2)rotateZ(5deg)}
+  90% {transform: scale(1.2)rotateZ(-5deg)}
+  95% {transform: scale(1.2)rotateZ(5deg)}
+  100% {transform: scale(1)rotateZ(0)}
+}
+
+.social-icons {
+    width: 150px;
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0 20px 0;
+    border-top: 1px solid #999;
+    padding-top: 20px;
+}
+
+.social-icons i {
+    font-size: 18px;
+}
+
+.fa-facebook-f {
+    color: #3b5999;
+}
+.fa-youtube {
+    color: #cd201f;
+}
+.fa-twitter {
+    color: #55acee;
+}
+.fa-google-plus-g {
+    color: #dd4b39;
+}
+
